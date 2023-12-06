@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { SimpleGrid, Text, Heading, Box, Flex, Button, ButtonGroup, IconButton, Checkbox, Spacer, Badge, Tooltip, TableContainer, Table, Tbody } from '@chakra-ui/react';
+import { SimpleGrid, Text, Heading, Box, Flex, Button, ButtonGroup, IconButton, Checkbox, Spacer, Badge, TableContainer, Table, Tbody } from '@chakra-ui/react';
 import { AppMain } from '@/components/layout/Main';
 import AlertTriangleIcon from '@/icons/alert-triangle';
 import GoodIcon from '@/icons/good';
@@ -8,7 +8,6 @@ import FilterIcon from '@/icons/filter';
 import ListIcon from '@/icons/list-icon';
 import GridIcon from '@/icons/gridIcon';
 import PlayIcon from '@/icons/play';
-import Edit2Icon from '@/icons/edit2';
 import ActionIcon from '@/icons/action-icon';
 import ClockIcon from '@/icons/clock-icon';
 import WebsiteIcon from '@/icons/website';
@@ -17,6 +16,7 @@ import WeChatIcon from '@/icons/wechat-icon';
 import ShieldIcon from '@/icons/shield-icon';
 import ChromeIcon from '@/icons/chrome-icon';
 import MapIcon from '@/icons/map-icon';
+import EditIcon from '@/icons/edit';
 
 /*
     Notes:
@@ -103,9 +103,6 @@ export default function Monitor() {
                             <SimpleGrid>
                                 <Heading as="h6" size="xs">
                                     My first monitoring
-                                    <Tooltip hasArrow label="Phone number" fontSize="md" placement="top">
-                                        <AlertTriangleIcon width="22px" height="22px" color="warning.600" ml="1" />
-                                    </Tooltip>
                                 </Heading>
                                 <Text color="gray.500">2 URLs</Text>
                             </SimpleGrid>
@@ -150,8 +147,8 @@ export default function Monitor() {
                                         30 sec
                                     </Text>
                                 </Flex>
-                                <IconButton m={1} icon={<PlayIcon />} />
-                                <IconButton m={2} icon={<Edit2Icon />} />
+                                <IconButton m={1} bg="#1C6DB6" icon={<PlayIcon />} />
+                                <IconButton m={2} icon={<EditIcon />} />
                                 <IconButton m={1} icon={<ActionIcon />} />
                             </Flex>
                         </Flex>
