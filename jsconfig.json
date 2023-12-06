@@ -1,0 +1,8 @@
+{
+  "checkjs": true,
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}

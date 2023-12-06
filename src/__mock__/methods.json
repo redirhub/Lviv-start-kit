@@ -1,0 +1,46 @@
+{
+  "data": [
+    {
+      "id": "301",
+      "label": "301 Permanently Redirect",
+      "short": "301 Redirect",
+      "description": "User will be redirected with 301 response. Also suitable for SEO authority transfer",
+      "as_paid_feature": null
+    },
+    {
+      "id": "302",
+      "label": "302 Temporary Redirect ",
+      "short": "302 Redirect",
+      "description": null,
+      "as_paid_feature": null
+    },
+    {
+      "id": "307",
+      "label": "307 Temporary Redirect\t",
+      "short": "307 Redirect",
+      "description": null,
+      "as_paid_feature": null
+    },
+    {
+      "id": "308",
+      "label": "308 Permanently Redirect\t",
+      "short": "308 Redirect",
+      "description": null,
+      "as_paid_feature": null
+    },
+    {
+      "id": "frame",
+      "label": "Frame (Masking)",
+      "short": "Frame",
+      "description": "It will keep Source URL in browser. But not all destination can be framed. ",
+      "as_paid_feature": "record.frame"
+    },
+    {
+      "id": "txt",
+      "label": "Custom HTML",
+      "short": "HTML",
+      "description": "A customized HTML snippet will be responded without redirection.",
+      "as_paid_feature": "record.txt"
+    }
+  ]
+}

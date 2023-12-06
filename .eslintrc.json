@@ -1,0 +1,38 @@
+{
+  "extends": "next/core-web-vitals",
+  "plugins": ["unused-imports"],
+  "rules": {
+    "react-hooks/exhaustive-deps": "off",
+    "@next/next/no-document-import-in-page": "off",
+    "quotes": [2, "single"],
+    "semi": [1, "always"],
+    "indent": [2, 4, { "SwitchCase": 1 }],
+    "object-curly-spacing": [1, "always"],
+    "import/order": [
+      1,
+      {
+        "groups": [
+          "index",
+          "sibling",
+          "parent",
+          "internal",
+          "external",
+          "builtin",
+          "object",
+          "type"
+        ]
+      }
+    ],
+    "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ]
+  }
+}

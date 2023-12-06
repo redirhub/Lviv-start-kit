@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "host": "re3.pub",
+      "count_links": 0,
+      "dns_correct": 0,
+      "https_requested": 1,
+      "https_enabled": 0,
+      "checked_at": "2023-09-22T04:45:08.000000Z",
+      "created_at": "2023-09-19T14:32:07.000000Z",
+      "updated_at": "2023-09-22T04:45:08.000000Z"
+    },
+    {
+      "host": "r.pub",
+      "count_links": 2,
+      "dns_correct": 1,
+      "https_requested": 1,
+      "https_enabled": 0,
+      "checked_at": "2023-09-07T09:25:32.000000Z",
+      "created_at": "2023-09-15T09:25:32.000000Z",
+      "updated_at": "2023-09-19T10:26:34.000000Z"
+    },
+    {
+      "host": "mfpad.com",
+      "count_links": 16,
+      "dns_correct": 0,
+      "https_requested": 1,
+      "https_enabled": 1,
+      "checked_at": "2023-09-20T11:30:04.000000Z",
+      "created_at": "2023-04-18T19:27:22.000000Z",
+      "updated_at": "2023-09-20T11:30:04.000000Z"
+    },
+    {
+      "host": "ip.mfpad.com",
+      "count_links": 10,
+      "dns_correct": 0,
+      "https_requested": 0,
+      "https_enabled": 0,
+      "checked_at": "2023-09-20T12:45:51.000000Z",
+      "created_at": "2021-11-01T14:33:36.000000Z",
+      "updated_at": "2023-09-20T12:45:51.000000Z"
+    },
+    {
+      "host": "transferurl.com",
+      "count_links": 4,
+      "dns_correct": 1,
+      "https_requested": 0,
+      "https_enabled": 0,
+      "checked_at": "2023-08-31T05:45:06.000000Z",
+      "created_at": "2020-03-08T20:59:48.000000Z",
+      "updated_at": "2023-08-31T05:45:06.000000Z"
+    },
+    {
+      "host": "wpwarm.com",
+      "count_links": 6,
+      "dns_correct": 0,
+      "https_requested": 1,
+      "https_enabled": 1,
+      "checked_at": "2023-09-20T01:00:04.000000Z",
+      "created_at": "2020-03-08T20:59:48.000000Z",
+      "updated_at": "2023-09-20T01:00:04.000000Z"
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "total": 6,
+      "count": 6,
+      "per_page": 15,
+      "current_page": 1,
+      "total_pages": 1,
+      "links": {}
+    }
+  }
+}
