@@ -1,0 +1,33 @@
+{
+  "files.autoSave": "afterDelay",
+  "editor.formatOnPaste": true,
+  "editor.fontWeight": "normal",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [120],
+  "eslint.validate": ["javascript", "typescript"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.tslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript,typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDelete": false,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDragAndDrop": false,
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "editor.indentSize": "tabSize"
+}
