@@ -7,7 +7,7 @@ import EyeIcon from '@/icons/eye';
 import WarningRoundIcon from '@/icons/warning-round';
 import CheckCircleIcon from '@/icons/check-circle';
 
-// TODO: receive Stats data from the parent component
+// TODO: receive Stats data from the store/parent component
 export default function MonitorStats() {
     const { t } = useTranslation();
 
