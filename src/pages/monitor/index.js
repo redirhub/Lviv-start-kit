@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { SimpleGrid, Text, Heading, Box, Flex, Button, ButtonGroup, IconButton, Checkbox, Spacer, Badge, TableContainer, Table, Tbody } from '@chakra-ui/react';
+import { SimpleGrid, Text, Heading, Flex, Button, ButtonGroup, IconButton, Checkbox, Spacer, TableContainer, Table, Tbody, Box, Badge, Tooltip } from '@chakra-ui/react';
 import { AppMain } from '@/components/layout/Main';
 import AlertTriangleIcon from '@/icons/alert-triangle';
 import GoodIcon from '@/icons/good';
@@ -27,53 +27,39 @@ import EditIcon from '@/icons/edit';
 export default function Monitor() {
     const { t } = useTranslation();
 
+    const monitoringData = [
+        { icon: <EyesIcon />, label: 'Monitoring projects', count: 5, color: 'gray.500' },
+        { icon: <AlertTriangleIcon />, label: 'Alarms', count: 1, color: 'warning.500' },
+        { icon: <AlertOctagonIcon />, label: 'Errors', count: 2, color: 'error.500' },
+        { icon: <GoodIcon />, label: 'Good', count: 13, color: 'success.500' },
+    ];
+
+    const badgesData = [
+        { icon: <WebsiteIcon />, text: 'http', bgColor: 'warning.50', color: 'warning.700' },
+        { icon: <WeChatIcon />, text: 'WeChat', bgColor: 'success.50', color: 'success.700' },
+        { icon: <ShieldIcon />, text: 'QQ', bgColor: 'orange.50', color: 'orange.700' },
+        { icon: <ChromeIcon />, text: 'Chrome', bgColor: 'error.50', color: 'error.700' },
+        { icon: <MapIcon color="#363F72" />, text: 'Country', bgColor: '#F8F9FC', color: '#363F72' },
+    ];
+
+    const brokenItems = ['fsas.com', 'sda1e.com', 'dsss.com'];
+
     return (
         <AppMain title={t('shared.monitor', 'Monitor')}>
             <SimpleGrid p={5} spacing={10} minChildWidth="250px">
-                <Box p={5} bg="white" borderRadius="5px">
-                    <Flex justifyContent="start" alignItems="center">
-                        <EyesIcon width="24px" height="24px" color="#eaecf0" />
-                        <Text marginLeft="5px" color="gray.500">
-                            Monitoring projects
-                        </Text>
-                    </Flex>
-                    <Flex mt={2} justifyContent="center">
-                        <Heading>5</Heading>
-                    </Flex>
-                </Box>
-                <Box p={5} bg="white" borderRadius="5px">
-                    <Flex justifyContent="start" alignItems="center">
-                        <AlertTriangleIcon width="24px" height="24px" color="warning.600" />
-                        <Text marginLeft="5px" color="warning.500">
-                            Alarms
-                        </Text>
-                    </Flex>
-                    <Flex mt={2} justifyContent="center">
-                        <Heading>1</Heading>
-                    </Flex>
-                </Box>
-                <Box p={5} bg="white" borderRadius="5px">
-                    <Flex justifyContent="start" alignItems="center">
-                        <AlertOctagonIcon color="#1C6DB6" />
-                        <Text marginLeft="5px" color="error.500">
-                            Errors
-                        </Text>
-                    </Flex>
-                    <Flex mt={2} justifyContent="center">
-                        <Heading>2</Heading>
-                    </Flex>
-                </Box>
-                <Box p={5} bg="white" borderRadius="5px">
-                    <Flex justifyContent="start" alignItems="center">
-                        <GoodIcon color="#1C6DB6" />
-                        <Text marginLeft="5px" color="success.500">
-                            Good
-                        </Text>
-                    </Flex>
-                    <Flex mt={2} justifyContent="center">
-                        <Heading>13</Heading>
-                    </Flex>
-                </Box>
+                {monitoringData.map((item, index) => (
+                    <Box key={index} p={5} bg="white" borderRadius="5px">
+                        <Flex justifyContent="start" alignItems="center">
+                            {item.icon}
+                            <Text marginLeft="5px" color={item.color}>
+                                {item.label}
+                            </Text>
+                        </Flex>
+                        <Flex mt={2} justifyContent="center">
+                            <Heading>{item.count}</Heading>
+                        </Flex>
+                    </Box>
+                ))}
             </SimpleGrid>
             <Flex p={5} mt={5} w="100%" justifyContent="space-between">
                 <Heading>Monitorings</Heading>
@@ -106,41 +92,33 @@ export default function Monitor() {
                                 </Heading>
                                 <Text color="gray.500">2 URLs</Text>
                             </SimpleGrid>
-
+                            <Tooltip
+                                placement="top"
+                                label={
+                                    <Box>
+                                        <Text fontWeight="bold" mb="2">
+                                                Broken Items:
+                                        </Text>
+                                        {brokenItems.map((item, index) => (
+                                            <Text key={index}>{item}</Text>
+                                        ))}
+                                    </Box>
+                                }
+                            >
+                                <Box>
+                                    <AlertTriangleIcon color="warning.500" />
+                                </Box>
+                            </Tooltip>
                             <Spacer />
                             <Flex justifyContent="space-around" p={4} spacing={2} alignItems="center">
-                                <Badge fontSize="14px" mx={2} bg="warning.50" color="warning.700" px={4} py={1} borderRadius="16px">
-                                    <Flex justifyContent="space-between" alignItems="center" color="warning.700">
-                                        <WebsiteIcon color="warning.700" />
-                                        <Text ml="1">http</Text>
-                                    </Flex>
-                                </Badge>
-                                <Badge fontSize="14px" mx={2} bg="success.50" color="success.700" px={4} py={1} borderRadius="16px">
-                                    <Flex justifyContent="space-between" alignItems="center" color="success.700">
-                                        <WeChatIcon color="success.700" />
-                                        <Text ml="1">WeChat</Text>
-                                    </Flex>
-                                </Badge>
-                                <Badge fontSize="14px" mx={2} bg="orange.50" color="orange.700" px={4} py={1} borderRadius="16px">
-                                    <Flex justifyContent="space-between" alignItems="center" color="orange.700">
-                                        <ShieldIcon color="orange.700" />
-                                        <Text ml="1">QQ</Text>
-                                    </Flex>
-                                </Badge>
-                                <Badge fontSize="14px" mx={2} bg="error.50" color="error.700" px={4} py={1} borderRadius="16px">
-                                    <Flex justifyContent="space-between" alignItems="center" color="error.700">
-                                        <ChromeIcon color="error.700" />
-                                        <Text ml="1">Chrome</Text>
-                                    </Flex>
-                                </Badge>
-                                <Badge fontSize="14px" mx={2} bg="#F8F9FC" color="#F8F9FC" px={4} py={1} borderRadius="16px">
-                                    <Flex justifyContent="space-between" alignItems="center" color="#F8F9FC">
-                                        <MapIcon color="#363F72" />
-                                        <Text ml="1" color="#363F72">
-                                            Country
-                                        </Text>
-                                    </Flex>
-                                </Badge>
+                                {badgesData.map((badge, index) => (
+                                    <Badge key={index} fontSize="14px" mx={2} bg={badge.bgColor} color={badge.color} px={4} py={1} borderRadius="16px">
+                                        <Flex justifyContent="space-between" alignItems="center" color={badge.color}>
+                                            {badge.icon}
+                                            <Text ml="1">{badge.text}</Text>
+                                        </Flex>
+                                    </Badge>
+                                ))}
                                 <Flex m={8}>
                                     <ClockIcon />
                                     <Text color="gray.500" ml={1}>
