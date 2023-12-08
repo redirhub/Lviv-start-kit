@@ -25,6 +25,7 @@ export default function MonitorListItem({ item }) {
     return (
         <Box
             display='flex'
+            flexDirection={{ base: 'column', md: 'row' }}
             justifyContent='space-between'
             gap={4}
             bg='white'
@@ -50,7 +51,7 @@ export default function MonitorListItem({ item }) {
                     }`}</Text14W400>
                 </Flex>
             </Flex>
-            <Flex alignItems='center' gap={8}>
+            <Flex alignItems={{ md: 'center' }} flexDirection={{ base: 'column', md: 'row' }} gap={4}>
                 <Flex alignItems='center' gap={2}>
                     {item.tags.map(tag => (
                         <Tag size={'sm'} colorScheme={colorSchemes[random(0, 3)]} key={Math.random()} borderRadius={10}>

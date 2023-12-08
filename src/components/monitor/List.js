@@ -31,8 +31,8 @@ export default function MonitorList() {
     const [viewType, setViewType] = useState('list');
 
     return (
-        <>
-            <Flex justify={'space-between'} mt={12}>
+        <Box my={12}>
+            <Flex justify={'space-between'}>
                 <Text30W600>Monitorings</Text30W600>
                 <Button size='lg' colorScheme='primary'>
                     New monitoring
@@ -61,6 +61,6 @@ export default function MonitorList() {
                 </Flex>
             </Flex>
             {items.map(item => <MonitorListItem key={item.id} item={item} />)}
-        </>
+        </Box>
     );
 }
